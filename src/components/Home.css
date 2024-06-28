@@ -1,0 +1,24 @@
+.home-container {
+    text-align: center;
+    padding: 50px;
+    margin-top: 60px; /* Adjust this if you have a fixed header */
+  }
+  
+  .home-container h3 {
+    font-size: 28px;
+    color: #680606;
+  }
+  
+  .home-container h1 {
+    font-size: 36px;
+    color: #f5f4f3;
+    margin-top: 20px;
+  }
+  
+  .home-container p {
+    font-size: 18px;
+    color: #000000;
+    margin: 20px 0;
+  }
+  
+  

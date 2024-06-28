@@ -1,0 +1,57 @@
+/* Reset some basic styles */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Styling for the header */
+header {
+  padding: 10px 20px;
+  border-radius: 0 0 8px 8px;
+  position: fixed;
+  top: 0;
+  width: 100%; /* Changed from 90% to 100% for better alignment */
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add box-shadow to header */
+}
+.navbarfix{
+  width: 100%;
+  
+}
+
+/* Styling for navigation */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width:100% /* Center align the items vertically */
+}
+
+/* Styling for the list */
+ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0 0 0 450px;
+}
+
+/* Styling for list items */
+li {
+  margin: 0 20px;
+}
+
+/* Styling for links */
+a {
+  text-decoration: none;
+  color: #007BFF;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: color 0.3s, transform 0.3s;
+  padding: 10px 0;
+}
+
+/* Add hover effect for links */
+a:hover {
+  color: #0056b3;
+  transform: scale(1.1);
+}

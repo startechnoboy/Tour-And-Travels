@@ -1,0 +1,40 @@
+.default-container {
+  text-align: center;
+  padding: 50px;
+  margin-top: 60px; /* Adjust this if you have a fixed header */
+}
+
+.default-container h1 {
+  font-size: 36px;
+  color: #030000;
+}
+
+.default-container h2 {
+  font-size: 25px;
+  color: #f7f4f4;
+  margin: 20px 0;
+}
+
+.indian-flag {
+  width: 150px; /* Adjust the width as necessary */
+  height: auto;
+  display: block;
+  margin: 0 auto 20px; /* Center the image and add some margin below */
+}
+
+.word {
+  opacity: 0;
+  display: inline-block;
+  animation: dropIn 3.8s forwards;
+}
+
+@keyframes dropIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
