@@ -22,7 +22,7 @@ function Header({ isLoggedIn }) {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mx-auto">
-          <Nav.Link href="/">Home</Nav.Link>
+          <Nav.Link href="/home">Home</Nav.Link>
           {isLoggedIn && <Nav.Link href="/dashboard">Dashboard</Nav.Link>}
           {isLoggedIn && <Nav.Link href="/about">About</Nav.Link>}
           <Nav.Link href="/support">Support</Nav.Link>
