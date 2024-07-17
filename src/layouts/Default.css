@@ -1,3 +1,4 @@
+
 .default-container {
   text-align: center;
   padding: 50px;
@@ -9,7 +10,7 @@
   color: #030000;
 }
 
-.default-container h2 {
+.default-container h3 {
   font-size: 25px;
   color: #f7f4f4;
   margin: 20px 0;
@@ -37,4 +38,94 @@
     transform: translateY(0);
     opacity: 1;
   }
+}
+
+h1.text {
+  font-size: 3em;
+  color: #333;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, rgba(230, 34, 8, 0.8), rgba(51, 45, 24, 0.8));
+  -webkit-background-clip: text;
+  color: transparent;
+  margin: 0;
+}
+
+h1.texting {
+  font-size: 2.5em; /* Slightly larger font size */
+  color: #3a3b3b; /* White text color */
+  text-align: center;
+  font-family: 'Montserrat', sans-serif; /* Modern font family */
+  font-weight: 700; /* Extra bold text */
+ 
+  padding: 20px; /* Increased padding for more space */
+  border-radius: 15px; /* More rounded corners */
+ 
+
+  margin: 20px auto; /* Centering with margin */
+}
+
+/* .default-container {
+  text-align: center;
+  padding: 20px;
+} */
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.gallery-item {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(212, 24, 24, 0.2);
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 50px;
+  margin-top: 20px;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer a {
+  color: #f7f4f4;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+.btn {
+  background-color: #ff7f50; /* Coral color */
+  color: white;
+  padding: 10px 20px; /* Reduced padding */
+  font-size: 16px; /* Smaller font size */
+  font-weight: bold;
+  border: none;
+  border-radius: 15px; /* Adjusted border radius */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Adjusted shadow */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #f3eae7; /* Orange Red color */
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  background-color: #ff6347; /* Tomato color */
+  transform: translateY(2px);
 }

@@ -1,0 +1,85 @@
+/* Reset some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1000; /* Ensures the navbar is above other content */
+  }
+  
+  .navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  .navbar-content ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .navbar-content a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .content {
+    margin-top: 60px; /* Height of the navbar */
+    padding: 20px;
+  }
+  
+  .cardItem {
+    transition: transform 0.2s;
+    margin-top: 110px;  
+
+  }
+  
+  .cardItem:hover {
+    transform: translateY(-10px);
+  }
+  
+  .cardItem img {
+    max-width: 100%;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .cardItem h2 {
+    margin: 10px 0;
+    font-size: 24px;
+  }
+  
+  .cardItem p {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .cardItem button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .cardItem button:hover {
+    background-color: #218838;
+  }
+  

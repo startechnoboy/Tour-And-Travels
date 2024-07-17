@@ -1,7 +1,7 @@
 .home-container {
     text-align: center;
-    padding: 50px;
-    margin-top: 60px; /* Adjust this if you have a fixed header */
+    padding: 10px;
+    margin-top: 90px; /* Adjust this if you have a fixed header */
   }
   
   .home-container h3 {
@@ -19,6 +19,110 @@
     font-size: 18px;
     color: #000000;
     margin: 20px 0;
+  }
+  
+  .Home {
+    font-family: Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    margin-top: 100px;
+  }
+  
+  .hero-section {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    color: rgb(10, 0, 0);
+    text-align: center;
+    /* padding: 10px; */
+    margin-top:220px;
+
+  }
+  
+  .hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+    margin-top: 100px;
+  }
+  
+  .hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 0.2em;
+    margin-top: 8em;
+
+  }
+  
+  .cta-button {
+    padding: 0.8em 4em;
+    font-size: 1em;   
+    color: white;
+    background-color: #ff6200;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 13em;
+  }
+  
+  .cta-button:hover {
+    background-color: #e55b00;
+  }
+  
+  .introduction {
+    padding: 2em 1em;
+    text-align: center;
+  }
+  
+  .introduction h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    color: #f9f9f9;
+  }
+  
+  .introduction p {
+    font-size: 1.2em;
+    color: #f5eded;
+  }
+  
+  .destinations {
+    padding: 2em 1em;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .destinations h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+  }
+  
+  .destination-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .destination-card {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 1em;
+    max-width: 300px;
+  }
+  
+  .destination-card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .destination-card h3 {
+    font-size: 1.5em;
+    margin: 0.5em 0;
+  }
+  
+  .destination-card p {
+    padding: 0 1em 1em;
+    color: #555;
   }
   
   

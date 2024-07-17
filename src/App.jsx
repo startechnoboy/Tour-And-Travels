@@ -8,10 +8,15 @@ import Home from "./components/Home";
 import Dashboard from "./components/Dashboard";
 import Support from "./components/Support";
 import Default from "./layouts/Default";
-import ProtectedRoute from "./components/Protected"; // Import the ProtectedRoute component
+import ProtectedRoute from "./components/ProtectedRoute";
+import Tour from "./components/Tour";
+import About from "./components/About";
+import AuthHeader from "./components/AuthHeader";
+import ViewDetails from "./components/ViewDetails";
 
 import "./App.css";
-import "./components/Header.css";
+import "./components/Tours.css";
+// import "./components/Header.css";
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -23,6 +28,7 @@ const App = () => {
   return (
     <>
       <Header isLoggedIn={isLoggedIn} />
+      <AuthHeader />
       <Routes>
         <Route path="/" element={<Default />} />
         <Route
@@ -33,7 +39,14 @@ const App = () => {
             </ProtectedRoute>
           }
         />
+
+        {/* <Route path="/dashboard" element={<Dashboard />} /> */}
+        <Route path="/tour" element={<Tour />} />
+        <Route path="/ViewDetails" element={<ViewDetails />} />
+        <Route path="/about" element={<About />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        {/* <Route path="/support" element={<Support />} /> */}
+
         <Route
           path="/support"
           element={
@@ -44,7 +57,7 @@ const App = () => {
         />
         <Route path="/login" element={<LoginForm onLogin={handleLogin} />} />
         <Route path="/signup" element={<Form />} />
-      </Routes>
+      </Routes> 
     </>
   );
 };

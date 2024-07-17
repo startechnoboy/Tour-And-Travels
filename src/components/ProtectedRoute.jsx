@@ -12,14 +12,4 @@ ProtectedRoute.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-function Protected() {
-  return (
-    <div>
-      <ProtectedRoute isLoggedIn={false}>
-        <div>Protected Content</div>
-      </ProtectedRoute>
-    </div>
-  );
-}
-
-export default Protected;
+export default ProtectedRoute;

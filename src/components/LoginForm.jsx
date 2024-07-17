@@ -2,10 +2,13 @@
 /* eslint-disable react/prop-types */
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { login } from "../Store/AuthSlice";
 
 const LoginForm = ({ onLogin }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -24,7 +27,8 @@ const LoginForm = ({ onLogin }) => {
     } else {
       console.log("Logged in");
       onLogin(); // Call onLogin to update the login state
-      navigate('/dashboard', { state: { email } });
+      dispatch(login({ email, password }));
+      navigate("/home", { state: { email } });
     }
   };
 
@@ -52,7 +56,9 @@ const LoginForm = ({ onLogin }) => {
         />
       </div>
       <div>
-        <button type="submit">Submit</button>
+        <button type="submit" onClick={handleSubmit}>
+          Submit
+        </button>
       </div>
     </form>
   );

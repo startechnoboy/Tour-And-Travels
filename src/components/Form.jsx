@@ -1,33 +1,37 @@
+/* eslint-disable no-undef */
+/* eslint-disable react-refresh/only-export-components */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import React, { Component } from "react";
-import { useNavigate } from 'react-router-dom';  // Assuming you have a CSS file for styles
+import { Navigate } from "react-router-dom";
+import { connect } from "react-redux";
+import { register } from "../Store/AuthSlice";
 
 class Form extends Component {
   constructor(props) {
     super(props);
     this.state = {
       inputData: { name: "", email: "", password: "" },
-      flag: false
+      flag: false,
     };
   }
-  
-  componentDidUpdate( prevState) {
+
+  componentDidUpdate(prevState) {
     if (this.state.flag && prevState.flag !== this.state.flag) {
       // console.log("Registered");
       setTimeout(() => {
-        this.props.navigate('/login');
-      }, 2000); // 2-second delay to show the notification
+        // this.props.navigate('/login');
+      }, 2000);
     }
   }
- 
+
   handleChange = (e) => {
     const { name, value } = e.target;
     this.setState((prevState) => ({
       inputData: {
         ...prevState.inputData,
-        [name]: value
-      }
+        [name]: value,
+      },
     }));
   };
 
@@ -38,12 +42,13 @@ class Form extends Component {
       alert("All fields are required...");
     } else {
       this.setState({ flag: true });
+      this.props.register(inputData);
     }
   };
 
   handleLoginRedirect = () => {
-    this.props.navigate('/login');
-  }
+    // this.props.navigate('/login');
+  };
 
   render() {
     const { inputData, flag } = this.state;
@@ -56,6 +61,7 @@ class Form extends Component {
           </div>
         )}
         <form className="container" onSubmit={this.handleSubmit}>
+          {this.props.user && <Navigate to={"/login"} />}
           <div className="header">
             <h1>Create New Account</h1>
             <h2>Sign Up</h2>
@@ -88,10 +94,21 @@ class Form extends Component {
             />
           </div>
           <div className="button-group">
-            <button type="submit" className="btn-submit">Submit</button>
+            <button type="submit" className="btn-submit">
+              Submit
+            </button>
           </div>
           <div className="footer">
-            <p>Already have an account? <button type="button" onClick={this.handleLoginRedirect} className="btn-login">Login</button></p>
+            <p>
+              Already have an account?{" "}
+              <button
+                type="button"
+                onClick={this.handleLoginRedirect}
+                className="btn-login"
+              >
+                Login
+              </button>
+            </p>
           </div>
         </form>
       </>
@@ -99,9 +116,16 @@ class Form extends Component {
   }
 }
 
-const FormWithNavigation = (props) => {
-  const navigate = useNavigate();
-  return <Form {...props} navigate={navigate} />;
-};
+const mapStateToProps = (state) => ({
+  user: state.auth.user,
+});
 
-export default FormWithNavigation;
+const mapDispatchToProps = { register };
+
+export default connect(mapStateToProps, mapDispatchToProps)(Form);
+
+// const FormWithNavigation = (props) => {
+//   const navigate = useNavigate();
+//   return <Form {...props} navigate={navigate} />;
+// };
+// export default FormWithNavigation;

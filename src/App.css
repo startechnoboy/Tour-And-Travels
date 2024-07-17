@@ -1,13 +1,13 @@
 /* Reset some basic styles */
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+  /* margin: 0;
+  padding: 0; */
   display: flex;
   /* justify-content: center; */
   /* align-items: center; */
   height: 100vh;
-  background-image: url("D:/REACT_JS/registration_from/src/pexels-riciardus-228095.jpg");
+  background-image: url("https://images.pexels.com/photos/592284/pexels-photo-592284.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -19,7 +19,7 @@ body {
     255,
     255,
     0.5
-  ); /* White background with 50% opacity */
+  ); 
   width: 400px;
   padding: 20px;
   border-radius: 8px;
