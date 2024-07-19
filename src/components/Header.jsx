@@ -23,6 +23,7 @@ function Header({ isLoggedIn, email, onLogout }) {
           <Nav.Link as={Link} to="/home">Home</Nav.Link>
           {isLoggedIn && <Nav.Link as={Link} to="/dashboard">Dashboard</Nav.Link>}
           {isLoggedIn && <Nav.Link as={Link} to="/tour">Tour</Nav.Link>}
+          {isLoggedIn && <Nav.Link as={Link} to="/cart">Add Cart</Nav.Link>}
           {isLoggedIn && <Nav.Link as={Link} to="/about">About</Nav.Link>}
           <Nav.Link as={Link} to="/support">Support</Nav.Link>
         </Nav>

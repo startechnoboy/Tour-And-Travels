@@ -1,4 +1,13 @@
-
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0; /* Optional: Change background color */
+  background: url('https://images.pexels.com/photos/868097/pexels-photo-868097.jpeg?auto=compress&cs=tinysrgb&w=600') no-repeat center center fixed;
+  background-size: cover;
+}
 .default-container {
   text-align: center;
   padding: 50px;
@@ -92,6 +101,7 @@ h1.texting {
   padding: 20px 50px;
   margin-top: 20px;
   text-align: center;
+  /* display: flex; */
   position: relative;
   bottom: 0;
   width: 100%;

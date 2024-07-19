@@ -57,6 +57,9 @@ function Tour() {
                   <Button variant="primary" className="w-100" onClick={handleViewDetails}>
                     View Details
                   </Button>
+                  {/* <Button variant="primary" className="w-100" onClick={handleViewDetails}>
+                    Add to cart
+                  </Button> */}
                 </div>
               </Card.Body>
             </Card>

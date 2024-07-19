@@ -15,7 +15,9 @@ import AuthHeader from "./components/AuthHeader";
 import ViewDetails from "./components/ViewDetails";
 
 import "./App.css";
+import "./components/Form.css";
 import "./components/Tours.css";
+import Cart from "./components/Cart";
 // import "./components/Header.css";
 
 const App = () => {
@@ -44,6 +46,7 @@ const App = () => {
         <Route path="/tour" element={<Tour />} />
         <Route path="/ViewDetails" element={<ViewDetails />} />
         <Route path="/about" element={<About />} />
+        <Route path="/cart" element={<Cart />} />
         <Route path="/dashboard" element={<Dashboard />} />
         {/* <Route path="/support" element={<Support />} /> */}
 

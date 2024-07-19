@@ -6,6 +6,7 @@ import React, { Component } from "react";
 import { Navigate } from "react-router-dom";
 import { connect } from "react-redux";
 import { register } from "../Store/AuthSlice";
+// import "./Form.css";
 
 class Form extends Component {
   constructor(props) {
